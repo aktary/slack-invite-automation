@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/inviter/dev/1502983104450-2017-08-17T15:18:24.450Z/inviter.zip"
+          "S3Key": "serverless/inviter/dev/1503330517606-2017-08-21T15:48:37.606Z/inviter.zip"
         },
         "FunctionName": "inviter-dev-inviter",
         "Handler": "handler.handler",
@@ -111,14 +111,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "InviterLambdaVersionklHzUFW738U2KcfqqXDtbhglnZi11gUdyouOJLvtN4w": {
+    "InviterLambdaVersionaQY63E7NhddazVRP5ygIUAhXI4n5peUmSPjwMfk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "InviterLambdaFunction"
         },
-        "CodeSha256": "klHzUFW738U2KcfqqXDtbhglnZi11gUdyouOJLvtN4w="
+        "CodeSha256": "aQY/63E7N+hddazVRP5ygIUAh+XI4n5peUmSPjwM/fk="
       }
     },
     "ApiGatewayRestApi": {
@@ -270,7 +270,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1502983104478": {
+    "ApiGatewayDeployment1503330517632": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -337,7 +337,7 @@
     "InviterLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "InviterLambdaVersionklHzUFW738U2KcfqqXDtbhglnZi11gUdyouOJLvtN4w"
+        "Ref": "InviterLambdaVersionaQY63E7NhddazVRP5ygIUAhXI4n5peUmSPjwMfk"
       }
     },
     "ServiceEndpoint": {
