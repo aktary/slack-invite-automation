@@ -4,12 +4,14 @@ var request = require('request');
 var config = require('../config');
 
 router.get('/', function(req, res) {
+  console.log('router get /');
   res.setLocale(config.locale);
   res.render('index', { community: config.community,
                         tokenRequired: !!config.inviteToken });
 });
 
 router.post('/invite', function(req, res) {
+  console.log('router post /invite');
   if (req.body.email && (!config.inviteToken || (!!config.inviteToken && req.body.token === config.inviteToken))) {
     request.post({
         url: 'https://'+ config.slackUrl + '/api/users.admin.invite',
@@ -53,6 +55,7 @@ router.post('/invite', function(req, res) {
         }
       });
   } else {
+    console.log('else');
     var errMsg = [];
     if (!req.body.email) {
       errMsg.push('your email is required');
